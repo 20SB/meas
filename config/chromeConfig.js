@@ -1,4 +1,9 @@
+import puppeteer from "puppeteer-extra";
+import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import * as chromeLauncher from "chrome-launcher";
+
+// Use the stealth plugin to avoid detection
+puppeteer.use(StealthPlugin());
 
 // Determine the Chrome path based on environment (AWS vs. Local PC)
 export function getChromePath() {

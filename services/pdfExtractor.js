@@ -9,6 +9,12 @@ export const getPdf = async (url, page, urlQueue, visitedPdfUrls, allPdf) => {
 
     // Go to the URL
     await page.goto(url, { waitUntil: "networkidle2" });
+    // await page.screenshot({ path: "screenshot.png" });
+
+    // const innerText = await page.evaluate(() => {
+    //   return document.body.innerText;
+    // });
+    // console.log(innerText);
 
     try {
       // Check if the input and submit button exist
