@@ -1,0 +1,34 @@
+=======
+# Node modules
+node_modules/
+.env
+
+# Build output
+dist/
+build/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+userData/
+
+# Environment variables
+.env
+
+# Temporary files
+temp/
+temp_files/
+tempFiles/
+userData/
+tempFiles
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Other
+*.tgz
+>>>>>>> 9b11d05f24092bee6b07a71af65347d5c6e5567a
+
+scripts\mea
