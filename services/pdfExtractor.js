@@ -39,13 +39,15 @@ export const getPdf = async (url, page, urlQueue, visitedPdfUrls, allPdf) => {
     // do scrapping for of the page
     try {
       // Wait for <a> tags on page
-      try {
-        await page.waitForSelector("a", { timeout: 15000 });
-      } catch (error) {
-        // Element not found within the timeout, skip without throwing error
-        console.log("Element not found, skipping...", error.message);
-        return;
-      }
+      // try {
+      //   await page.waitForSelector("a", { timeout: 15000 });
+      // } catch (error) {
+      //   // Element not found within the timeout, skip without throwing error
+      //   console.log("Element not found, skipping...", error.message);
+      //   return;
+      // }
+
+      await delay(3000);
 
       // await delay(10000);
       // Get all the <a> elements
@@ -336,15 +338,15 @@ export const getPdf = async (url, page, urlQueue, visitedPdfUrls, allPdf) => {
         // do scrapping if pagination found
         try {
           // Wait for <a> tags on page
-          try {
-            await page.waitForSelector("a", { timeout: 5000 });
-          } catch (error) {
-            // Element not found within the timeout, skip without throwing error
-            console.log("Element not found, skipping...", error.message);
-            return;
-          }
+          // try {
+          //   await page.waitForSelector("a", { timeout: 5000 });
+          // } catch (error) {
+          //   // Element not found within the timeout, skip without throwing error
+          //   console.log("Element not found, skipping...", error.message);
+          //   return;
+          // }
 
-          // await delay(10000);
+          await delay(3000);
 
           // Get all the <a> elements
           const allAnchorData = await page.evaluate(() => {
