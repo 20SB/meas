@@ -3,7 +3,7 @@ import { getChromePath } from "./chromeConfig.js";
 export const browserConfig = {
   defaultViewport: null,
   chromeFlags: [
-    // "--headless",
+    "--headless",
     "--no-sandbox", // Disable sandboxing for compatibility
     "--disable-gpu", // Disable GPU rendering
     "--disable-dev-shm-usage", // Avoid shared memory issues
